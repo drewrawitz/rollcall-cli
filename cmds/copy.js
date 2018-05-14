@@ -1,4 +1,3 @@
-const template = require("../utils/template");
 const pbcopy = require("../utils/pbcopy");
 
 module.exports = (args, config) => {
