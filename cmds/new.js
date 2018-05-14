@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const chalk = require("chalk");
 const template = require("../utils/template");
+const pbcopy = require("../utils/pbcopy");
 
 module.exports = async (args, config) => {
   let tasks = [];
@@ -88,7 +89,11 @@ module.exports = async (args, config) => {
 
       answers.tasks = todaysTasks;
 
-      template(answers, config);
+      const rollcall = template(answers, config);
+      pbcopy(rollcall);
+
+      // store today's rollcall so we can easily access it
+      config.set("rollcall", rollcall);
 
       // store today's task as "yesterday" for tomorrows entry
       config.set("yesterday", todaysTasks);

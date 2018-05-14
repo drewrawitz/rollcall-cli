@@ -1,16 +1,11 @@
 const dateTime = require("node-datetime");
+const pbcopy = require("./pbcopy");
 
 module.exports = (data, config) => {
   let dt = dateTime.create();
   let formattedTime = dt.format("m/d/y");
   let extra = "";
   let yesterday = "";
-
-  function pbcopy(data) {
-    var proc = require("child_process").spawn("pbcopy");
-    proc.stdin.write(data);
-    proc.stdin.end();
-  }
 
   if (data.blockers) {
     extra = `> (B) ${data.blockers}`;
@@ -44,7 +39,5 @@ ${extra}
 *Hours:*
 > ${data.hours}
 `;
-
-  pbcopy(template);
-  console.log("Rollcall copied to clipboard.");
+  return template;
 };

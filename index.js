@@ -18,6 +18,14 @@ module.exports = () => {
   }
 
   switch (cmd) {
+    case "copy":
+      require("./cmds/copy")(args, config);
+      break;
+
+    case "clear":
+      require("./cmds/clear")(config);
+      break;
+
     case "new":
       require("./cmds/new")(args, config);
       break;
