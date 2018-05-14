@@ -1,0 +1,31 @@
+{
+  "name": "rollcall-cli",
+  "version": "1.0.0",
+  "description": "A CLI app that helps prepare your rollcall for Slack",
+  "license": "MIT",
+  "homepage": "https://github.com/timberio/outside-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timberio/outside-cli.git"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "slack",
+    "rollcall"
+  ],
+  "preferGlobal": true,
+  "bin": {
+    "rollcall": "bin/rollcall"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "conf": "^1.4.0",
+    "inquirer": "^5.2.0",
+    "minimist": "^1.2.0",
+    "node-datetime": "^2.0.6"
+  }
+}
