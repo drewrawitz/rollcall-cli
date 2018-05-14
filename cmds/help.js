@@ -8,7 +8,8 @@ const menus = {
     yesterday........... show yesterdays tasks 
     clear .............. clear any stored rollcall data and start fresh
     version ............ show package version
-    help ............... show help menu for a command`,
+    help ............... show help menu for a command
+    `,
 
   yesterday: `
     rollcall location <options>

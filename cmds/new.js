@@ -14,7 +14,7 @@ module.exports = async (args, config) => {
     }
   ];
 
-  var questions = [
+  const questions = [
     {
       type: "input",
       name: "location",
