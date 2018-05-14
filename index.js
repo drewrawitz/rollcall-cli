@@ -26,6 +26,10 @@ module.exports = () => {
       require("./cmds/location")(args, config);
       break;
 
+    case "yesterday":
+      require("./cmds/yesterday")(args, config);
+      break;
+
     case "version":
       require("./cmds/version")(args);
       break;

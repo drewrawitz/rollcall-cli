@@ -4,11 +4,17 @@ const menus = {
 
     new ................ create a new rollcall entry for today
     location ........... show the location you currently have set
+    yesterday........... show yesterdays tasks 
     version ............ show package version
     help ............... show help menu for a command`,
 
+  yesterday: `
+    rollcall location <options>
+
+    --clear, ..... clear yesterdays entry`,
+
   location: `
-    outside location <options>
+    rollcall location <options>
 
     --set, ..... your new location,
     
