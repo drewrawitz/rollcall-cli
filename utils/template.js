@@ -17,7 +17,7 @@ module.exports = (data, config) => {
   }
 
   if (!data.blockers && !data.reminders) {
-    extra = "None";
+    extra = "> None";
   }
 
   if (typeof config.get("yesterday") !== "undefined") {
